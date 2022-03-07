@@ -22,7 +22,6 @@ namespace WindowsFormsApp2
         public SignUp()
         {
             InitializeComponent();
-            //this.mainSelectedLang = selectedLang;
         }
 
         private void SignUp_Load(object sender, EventArgs e)
@@ -63,30 +62,6 @@ namespace WindowsFormsApp2
             }
         }
 
-        private void SignUp_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            this.Hide();
-            formMain.Show();
-        }
-
-        private void SignUp_Click(object sender, EventArgs e)
-        {
-            /*if ((txtFirstName.Text.Length >= 0) || 
-                txtFirstName.Text.ToLower() == "Fornavn" || // Norwegian
-                txtFirstName.Text.ToLower() == "Vorname" || // German
-                txtFirstName.Text.ToLower() == "First name") // English
-            {
-                txtFirstName.Clear();
-            }*/
-
-            //txtFirstName.Clear();
-        }
-
-        private void txtFirstName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            txtFirstName.ForeColor = System.Drawing.Color.Black;
-        }
-
         private void cbLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
             int selectedIndex = cbLanguage.SelectedIndex;
@@ -98,23 +73,62 @@ namespace WindowsFormsApp2
                     pbFlag.Image = Properties.Resources.norway;
                     mainSelectedLang = 0;
                     txtFirstName.Text = "Fornavn";
+                    txtLastName.Text = "Etternavn";
+                    txtPassportNum.Text = "Passnummer";
                     break;
                 case 1:
                     pbFlag.Image = Properties.Resources.germany;
                     mainSelectedLang = 1;
                     txtFirstName.Text = "Vorname";
+                    txtLastName.Text = "Nachname";
+                    txtPassportNum.Text = "Ausweisnummer";
                     break;
                 case 2:
                     pbFlag.Image = Properties.Resources.uk;
                     mainSelectedLang = 2;
                     txtFirstName.Text = "First name";
+                    txtLastName.Text = "Last name";
+                    txtPassportNum.Text = "Passport number";
                     break;
                 default:
                     pbFlag.Image = Properties.Resources.norway;
                     mainSelectedLang = 0;
                     txtFirstName.Text = "Fornavn";
+                    txtLastName.Text = "Etternavn";
+                    txtPassportNum.Text = "Passnummer";
                     break;
             }
+        }
+
+        private void txtFirstName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtFirstName.ForeColor = System.Drawing.Color.Black;
+        }
+
+        private void txtLastName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtLastName.ForeColor = System.Drawing.Color.Black;
+        }
+
+        private void txtPassportNum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtPassportNum.ForeColor = System.Drawing.Color.Black;
+        }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            firstName = txtFirstName.Text;
+            lastName = txtLastName.Text;
+            passportNum = txtPassportNum.Text;
+
+            this.Hide();
+            //formMain.Show();
+        }
+
+        private void SignUp_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+            //formMain.Show();
         }
     }
 }

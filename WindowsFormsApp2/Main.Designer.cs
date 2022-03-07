@@ -114,7 +114,6 @@ namespace WindowsFormsApp2
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Toll System";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
-            this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbFlag)).EndInit();
             this.ResumeLayout(false);
 

@@ -34,6 +34,7 @@ namespace WindowsFormsApp2
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtPassportNum = new System.Windows.Forms.TextBox();
+            this.btnSignUp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbFlag)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +70,7 @@ namespace WindowsFormsApp2
             this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFirstName.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold);
             this.txtFirstName.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtFirstName.Location = new System.Drawing.Point(87, 231);
+            this.txtFirstName.Location = new System.Drawing.Point(86, 193);
             this.txtFirstName.MaxLength = 50;
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(387, 43);
@@ -84,12 +85,13 @@ namespace WindowsFormsApp2
             this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLastName.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold);
             this.txtLastName.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtLastName.Location = new System.Drawing.Point(87, 306);
+            this.txtLastName.Location = new System.Drawing.Point(86, 268);
             this.txtLastName.MaxLength = 50;
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(387, 43);
             this.txtLastName.TabIndex = 8;
             this.txtLastName.Text = "Etternavn";
+            this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtPassportNum
             // 
@@ -97,18 +99,32 @@ namespace WindowsFormsApp2
             this.txtPassportNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassportNum.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold);
             this.txtPassportNum.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtPassportNum.Location = new System.Drawing.Point(87, 381);
+            this.txtPassportNum.Location = new System.Drawing.Point(86, 343);
             this.txtPassportNum.MaxLength = 50;
             this.txtPassportNum.Name = "txtPassportNum";
             this.txtPassportNum.Size = new System.Drawing.Size(387, 43);
             this.txtPassportNum.TabIndex = 9;
             this.txtPassportNum.Text = "Passnummer";
+            this.txtPassportNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassportNum_KeyPress);
+            // 
+            // btnSignUp
+            // 
+            this.btnSignUp.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSignUp.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold);
+            this.btnSignUp.Location = new System.Drawing.Point(173, 446);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(200, 50);
+            this.btnSignUp.TabIndex = 10;
+            this.btnSignUp.Text = "Melde deg på";
+            this.btnSignUp.UseVisualStyleBackColor = true;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 561);
+            this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.txtPassportNum);
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.txtFirstName);
@@ -119,7 +135,6 @@ namespace WindowsFormsApp2
             this.Text = "Toll System | Sign up";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SignUp_FormClosing);
             this.Load += new System.EventHandler(this.SignUp_Load);
-            this.Click += new System.EventHandler(this.SignUp_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pbFlag)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -133,5 +148,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.TextBox txtPassportNum;
+        private System.Windows.Forms.Button btnSignUp;
     }
 }
