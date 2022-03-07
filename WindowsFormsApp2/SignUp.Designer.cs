@@ -91,6 +91,7 @@ namespace WindowsFormsApp2
             this.txtLastName.Size = new System.Drawing.Size(387, 43);
             this.txtLastName.TabIndex = 8;
             this.txtLastName.Text = "Etternavn";
+            this.txtLastName.Click += new System.EventHandler(this.txtLastName_Click);
             this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtPassportNum
@@ -105,6 +106,7 @@ namespace WindowsFormsApp2
             this.txtPassportNum.Size = new System.Drawing.Size(387, 43);
             this.txtPassportNum.TabIndex = 9;
             this.txtPassportNum.Text = "Passnummer";
+            this.txtPassportNum.Click += new System.EventHandler(this.txtPassportNum_Click);
             this.txtPassportNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassportNum_KeyPress);
             // 
             // btnSignUp
