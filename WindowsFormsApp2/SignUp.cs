@@ -13,9 +13,19 @@ namespace WindowsFormsApp2
     public partial class SignUp : Form
     {
         // Declaring global variables to pass text box data to Login form
-        private static string firstName;
-        private static string lastName;
-        private static string passportNum;
+        private static string signUpFirstName;
+        private static string signUpLastName;
+        private static string signUpPassportNum;
+
+        // Dcelaring global variables for error messages for all languages
+        private static string errorMsgNor = "Feil: Sørg for at alle tekstbokser er fylt ut.";
+        private static string errorMsgGer = "Fehler: Bitte stellen Sie sicher, dass alle Textfelder ausgefüllt sind.";
+        private static string errorMsgEng = "Error: Please make sure all text boxes are filled.";
+
+        // Declaring global variables for success messages for all languages
+        private static string successMsgNor = "Suksess: Fortsett for å logge på.";
+        private static string successMsgGer = "Erfolgreich: Bitte melden Sie sich an.";
+        private static string successMsgEng = "Success: Please proceed to log in.";
 
         // Declaring global variable to get and set selected language
         public int mainSelectedLang { get; set; }
@@ -39,6 +49,7 @@ namespace WindowsFormsApp2
                     txtFirstName.Text = "Fornavn";
                     txtLastName.Text = "Etternavn";
                     txtPassportNum.Text = "Passnummer";
+                    btnSignUp.Text = "Melde deg på";
                     break;
                 case 1:
                     pbFlag.Image = Properties.Resources.germany;
@@ -46,6 +57,7 @@ namespace WindowsFormsApp2
                     txtFirstName.Text = "Vorname";
                     txtLastName.Text = "Nachname";
                     txtPassportNum.Text = "Ausweisnummer";
+                    btnSignUp.Text = "Anmelden";
                     break;
                 case 2:
                     pbFlag.Image = Properties.Resources.uk;
@@ -53,6 +65,7 @@ namespace WindowsFormsApp2
                     txtFirstName.Text = "First name";
                     txtLastName.Text = "Last name";
                     txtPassportNum.Text = "Passport number";
+                    btnSignUp.Text = "Sign up";
                     break;
                 default:
                     pbFlag.Image = Properties.Resources.norway;
@@ -60,6 +73,7 @@ namespace WindowsFormsApp2
                     txtFirstName.Text = "Fornavn";
                     txtLastName.Text = "Etternavn";
                     txtPassportNum.Text = "Passnummer";
+                    btnSignUp.Text = "Melde deg på";
                     break;
             }
         }
@@ -81,6 +95,7 @@ namespace WindowsFormsApp2
                     txtFirstName.Text = "Fornavn";
                     txtLastName.Text = "Etternavn";
                     txtPassportNum.Text = "Passnummer";
+                    btnSignUp.Text = "Melde deg på";
                     break;
                 case 1:
                     pbFlag.Image = Properties.Resources.germany;
@@ -88,6 +103,7 @@ namespace WindowsFormsApp2
                     txtFirstName.Text = "Vorname";
                     txtLastName.Text = "Nachname";
                     txtPassportNum.Text = "Ausweisnummer";
+                    btnSignUp.Text = "Anmelden";
                     break;
                 case 2:
                     pbFlag.Image = Properties.Resources.uk;
@@ -95,6 +111,7 @@ namespace WindowsFormsApp2
                     txtFirstName.Text = "First name";
                     txtLastName.Text = "Last name";
                     txtPassportNum.Text = "Passport number";
+                    btnSignUp.Text = "Sign up";
                     break;
                 default:
                     pbFlag.Image = Properties.Resources.norway;
@@ -102,6 +119,7 @@ namespace WindowsFormsApp2
                     txtFirstName.Text = "Fornavn";
                     txtLastName.Text = "Etternavn";
                     txtPassportNum.Text = "Passnummer";
+                    btnSignUp.Text = "Melde deg på";
                     break;
             }
         }
@@ -168,11 +186,52 @@ namespace WindowsFormsApp2
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            SignUp.firstName = txtFirstName.Text;
-            SignUp.lastName = txtLastName.Text;
-            SignUp.passportNum = txtPassportNum.Text;
+            if (txtFirstName.Text.Length < 1 && 
+                txtLastName.Text.Length < 1 && 
+                txtPassportNum.Text.Length < 1 &&
+                txtFirstName.Text != "" &&
+                txtLastName.Text != "" &&
+                txtPassportNum.Text != "")
+            {
+                SignUp.signUpFirstName = txtFirstName.Text;
+                SignUp.signUpLastName = txtLastName.Text;
+                SignUp.signUpPassportNum = txtPassportNum.Text;
 
-            this.Hide();
+                switch (mainSelectedLang)
+                {
+                    case 0:
+                        MessageBox.Show(successMsgNor);
+                        break;
+                    case 1:
+                        MessageBox.Show(successMsgGer);
+                        break;
+                    case 2:
+                        MessageBox.Show(successMsgEng);
+                        break;
+                    default:
+                        MessageBox.Show(successMsgNor);
+                        break;
+                }
+
+                this.Hide();
+            } else
+            {
+                switch (mainSelectedLang)
+                {
+                    case 0:
+                        MessageBox.Show(errorMsgNor);
+                        break;
+                    case 1:
+                        MessageBox.Show(errorMsgGer);
+                        break;
+                    case 2:
+                        MessageBox.Show(errorMsgEng);
+                        break;
+                    default:
+                        MessageBox.Show(errorMsgNor);
+                        break;
+                }
+            }
         }
 
         ///
