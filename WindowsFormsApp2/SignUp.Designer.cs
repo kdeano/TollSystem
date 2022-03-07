@@ -70,7 +70,7 @@ namespace WindowsFormsApp2
             this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFirstName.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold);
             this.txtFirstName.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtFirstName.Location = new System.Drawing.Point(86, 193);
+            this.txtFirstName.Location = new System.Drawing.Point(98, 193);
             this.txtFirstName.MaxLength = 50;
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(387, 43);
@@ -85,7 +85,7 @@ namespace WindowsFormsApp2
             this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLastName.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold);
             this.txtLastName.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtLastName.Location = new System.Drawing.Point(86, 268);
+            this.txtLastName.Location = new System.Drawing.Point(98, 268);
             this.txtLastName.MaxLength = 50;
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(387, 43);
@@ -100,7 +100,7 @@ namespace WindowsFormsApp2
             this.txtPassportNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassportNum.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold);
             this.txtPassportNum.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtPassportNum.Location = new System.Drawing.Point(86, 343);
+            this.txtPassportNum.Location = new System.Drawing.Point(98, 343);
             this.txtPassportNum.MaxLength = 50;
             this.txtPassportNum.Name = "txtPassportNum";
             this.txtPassportNum.Size = new System.Drawing.Size(387, 43);
@@ -113,7 +113,7 @@ namespace WindowsFormsApp2
             // 
             this.btnSignUp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSignUp.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold);
-            this.btnSignUp.Location = new System.Drawing.Point(173, 446);
+            this.btnSignUp.Location = new System.Drawing.Point(185, 446);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(200, 50);
             this.btnSignUp.TabIndex = 10;
@@ -132,6 +132,7 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.cbLanguage);
             this.Controls.Add(this.pbFlag);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Toll System | Sign up";

@@ -13,9 +13,9 @@ namespace WindowsFormsApp2
     public partial class SignUp : Form
     {
         // Declaring global variables to pass text box data to Login form
-        private static string signUpFirstName;
-        private static string signUpLastName;
-        private static string signUpPassportNum;
+        public static string signUpFirstName;
+        public static string signUpLastName;
+        public static int signUpPassportNum;
 
         // Dcelaring global variables for error messages for all languages
         private static string errorMsgNor = "Feil: Sørg for at alle tekstbokser er fylt ut.";
@@ -163,6 +163,7 @@ namespace WindowsFormsApp2
 
         ///
         /// Added KeyPress events to text boxes to change colour to black
+        /// Prevents grey text when user uses TAB instead of mouse click to navigate
         ///
 
         private void txtFirstName_KeyPress(object sender, KeyPressEventArgs e)
@@ -186,16 +187,16 @@ namespace WindowsFormsApp2
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            if (txtFirstName.Text.Length < 1 && 
-                txtLastName.Text.Length < 1 && 
-                txtPassportNum.Text.Length < 1 &&
+            if (txtFirstName.Text.Length > 1 && 
+                txtLastName.Text.Length > 1 && 
+                txtPassportNum.Text.Length > 1 &&
                 txtFirstName.Text != "" &&
                 txtLastName.Text != "" &&
                 txtPassportNum.Text != "")
             {
                 SignUp.signUpFirstName = txtFirstName.Text;
                 SignUp.signUpLastName = txtLastName.Text;
-                SignUp.signUpPassportNum = txtPassportNum.Text;
+                SignUp.signUpPassportNum = Convert.ToInt32(txtPassportNum.Text);
 
                 switch (mainSelectedLang)
                 {

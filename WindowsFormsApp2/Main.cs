@@ -71,6 +71,18 @@ namespace WindowsFormsApp2
             formSignUp.ShowDialog();
         }
 
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Login formLogin = new Login();
+
+            formLogin.mainSelectedLang = selectedLang;
+            formLogin.firstName = SignUp.signUpFirstName;
+            formLogin.lastName = SignUp.signUpLastName;
+            formLogin.passportNum = SignUp.signUpPassportNum;
+            
+            formLogin.ShowDialog();
+        }
+
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
