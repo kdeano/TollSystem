@@ -17,20 +17,20 @@ namespace WindowsFormsApp2
         public static string carModel = "";
         public static string regNum = "";
 
-        // Declaring global variables for error (unknown) messages for all languages
-        private static string errorOtherMsgNor = "Feil: Ukjent feil oppstod - prøv igjen.";
-        private static string errorOtherMsgGer = "Fehler: Unbekannter Fehler aufgetreten - bitte versuchen Sie es erneut.";
-        private static string errorOtherMsgEng = "Error: Unknown error occurred - please try again.";
+        // Declaring global consts for error (unknown) messages for all languages
+        private const string ERROR_OTHER_MSG_NOR = "Feil: Ukjent feil oppstod - prøv igjen.";
+        private const string ERROR_OTHER_MSG_GER = "Fehler: Unbekannter Fehler aufgetreten - bitte versuchen Sie es erneut.";
+        private const string ERROR_OTHER_MSG_ENG = "Error: Unknown error occurred - please try again.";
 
-        // Declaring global variables for error (empty strings) messages for all languages
-        private static string errorEmptyMsgNor = "Feil: Sørg for at alle tekstbokser er fylt ut.";
-        private static string errorEmptyMsgGer = "Fehler: Bitte stellen Sie sicher, dass alle Textfelder ausgefüllt sind.";
-        private static string errorEmptyMsgEng = "Error: Please make sure all text boxes are filled.";
+        // Declaring global consts for error (empty strings) messages for all languages
+        private const string ERROR_EMPTY_MSG_NOR = "Feil: Sørg for at alle tekstbokser er fylt ut.";
+        private const string ERROR_EMPTY_MSG_GER = "Fehler: Bitte stellen Sie sicher, dass alle Textfelder ausgefüllt sind.";
+        private const string ERROR_EMPTY_MSG_ENG = "Error: Please make sure all text boxes are filled.";
 
-        // Declaring global variables for success messages for all languages
-        private static string successMsgNor = "Suksess: Skriv inn bankdetaljene dine nå.";
-        private static string successMsgGer = "Erfolgreich: Bitte geben Sie nun Ihre Bankverbindung ein.";
-        private static string successMsgEng = "Success: Now please enter your bank details.";
+        // Declaring global consts for success messages for all languages
+        private const string SUCCESS_MSG_NOR = "Suksess: Skriv inn bankdetaljene dine nå.";
+        private const string SUCCESS_MSG_GER = "Erfolgreich: Bitte geben Sie nun Ihre Bankverbindung ein.";
+        private const string SUCCESS_MSG_ENG = "Success: Now please enter your bank details.";
 
         public UserInfo()
         {
@@ -240,21 +240,36 @@ namespace WindowsFormsApp2
                 switch (mainSelectedLang)
                 {
                     case 0:
-                        MessageBox.Show(successMsgNor);
-                        txtAccountName.Text = "";
-                        txtCardNum.Text = "";
-                        lblExpiryDate.Text = "";
-                        txtSecurityCode.Text = "";
-                        btnSubmitBank.Text = "";
+                        MessageBox.Show(SUCCESS_MSG_NOR);
+                        txtAccountName.Text = "Brukernavn";
+                        txtCardNum.Text = "Kortnummer";
+                        lblExpiryDate.Text = "Utløpsdato";
+                        txtSecurityCode.Text = "Kort sikkerhetskode";
+                        btnSubmitBank.Text = "Sende inn";
                         break;
                     case 1:
-                        MessageBox.Show(successMsgGer);
+                        MessageBox.Show(SUCCESS_MSG_GER);
+                        txtAccountName.Text = "Kontobezeichnung";
+                        txtCardNum.Text = "Kartennummer";
+                        lblExpiryDate.Text = "Verfallsdatum";
+                        txtSecurityCode.Text = "Karten-Sicherheitscode";
+                        btnSubmitBank.Text = "Einreichen";
                         break;
                     case 2:
-                        MessageBox.Show(successMsgEng);
+                        MessageBox.Show(SUCCESS_MSG_ENG);
+                        txtAccountName.Text = "Account name";
+                        txtCardNum.Text = "Card number";
+                        lblExpiryDate.Text = "Expiry date";
+                        txtSecurityCode.Text = "Card security code";
+                        btnSubmitBank.Text = "Submit";
                         break;
                     default:
-                        MessageBox.Show(successMsgNor);
+                        MessageBox.Show(SUCCESS_MSG_NOR);
+                        txtAccountName.Text = "Brukernavn";
+                        txtCardNum.Text = "Kortnummer";
+                        lblExpiryDate.Text = "Utløpsdato";
+                        txtSecurityCode.Text = "Kort sikkerhetskode";
+                        btnSubmitBank.Text = "Sende inn";
                         break;
                 }
 
@@ -277,16 +292,16 @@ namespace WindowsFormsApp2
                 switch (mainSelectedLang)
                 {
                     case 0:
-                        MessageBox.Show(errorEmptyMsgNor);
+                        MessageBox.Show(ERROR_EMPTY_MSG_NOR);
                         break;
                     case 1:
-                        MessageBox.Show(errorEmptyMsgGer);
+                        MessageBox.Show(ERROR_EMPTY_MSG_GER);
                         break;
                     case 2:
-                        MessageBox.Show(errorEmptyMsgEng);
+                        MessageBox.Show(ERROR_EMPTY_MSG_ENG);
                         break;
                     default:
-                        MessageBox.Show(errorEmptyMsgNor);
+                        MessageBox.Show(ERROR_EMPTY_MSG_NOR);
                         break;
                 }
             } else
@@ -294,16 +309,16 @@ namespace WindowsFormsApp2
                 switch (mainSelectedLang)
                 {
                     case 0:
-                        MessageBox.Show(errorOtherMsgNor);
+                        MessageBox.Show(ERROR_OTHER_MSG_NOR);
                         break;
                     case 1:
-                        MessageBox.Show(errorOtherMsgGer);
+                        MessageBox.Show(ERROR_OTHER_MSG_GER);
                         break;
                     case 2:
-                        MessageBox.Show(errorOtherMsgEng);
+                        MessageBox.Show(ERROR_OTHER_MSG_ENG);
                         break;
                     default:
-                        MessageBox.Show(errorOtherMsgNor);
+                        MessageBox.Show(ERROR_OTHER_MSG_NOR);
                         break;
                 }
             }
@@ -316,6 +331,15 @@ namespace WindowsFormsApp2
         private void btnSubmitBank_Click(object sender, EventArgs e)
         {
             // TODO: Add logic for submit bank details button
+        }
+
+        ///
+        /// Closes this form on exit click to release memory
+        ///
+
+        private void UserInfo_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Close();
         }
     }
 }

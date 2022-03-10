@@ -272,6 +272,7 @@ namespace WindowsFormsApp2
             this.Name = "UserInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Toll System | User Information:";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UserInfo_FormClosed);
             this.Load += new System.EventHandler(this.UserInformation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbFlag)).EndInit();
             this.ResumeLayout(false);

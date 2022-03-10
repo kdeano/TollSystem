@@ -20,15 +20,15 @@ namespace WindowsFormsApp2
         public static string signUpLastName;
         public static int signUpPassportNum;
 
-        // Declaring global variables for error messages for all languages
-        private static string errorMsgNor = "Feil: Sørg for at alle tekstbokser er fylt ut.";
-        private static string errorMsgGer = "Fehler: Bitte stellen Sie sicher, dass alle Textfelder ausgefüllt sind.";
-        private static string errorMsgEng = "Error: Please make sure all text boxes are filled.";
+        // Declaring global consts for error messages for all languages
+        private const string ERROR_MSG_NOR = "Feil: Sørg for at alle tekstbokser er fylt ut.";
+        private const string ERROR_MSG_GER = "Fehler: Bitte stellen Sie sicher, dass alle Textfelder ausgefüllt sind.";
+        private const string ERROR_MSG_ENG = "Error: Please make sure all text boxes are filled.";
 
-        // Declaring global variables for success messages for all languages
-        private static string successMsgNor = "Suksess: Fortsett for å logge på.";
-        private static string successMsgGer = "Erfolgreich: Bitte melden Sie sich an.";
-        private static string successMsgEng = "Success: Please proceed to log in.";
+        // Declaring global consts for success messages for all languages
+        private const string SUCCESS_MSG_NOR = "Suksess: Fortsett for å logge på.";
+        private const string SUCCESS_MSG_GER = "Erfolgreich: Bitte melden Sie sich an.";
+        private const string SUCCESS_MSG_ENG = "Success: Please proceed to log in.";
 
         public SignUp()
         {
@@ -201,16 +201,16 @@ namespace WindowsFormsApp2
                 switch (mainSelectedLang)
                 {
                     case 0:
-                        MessageBox.Show(successMsgNor);
+                        MessageBox.Show(SUCCESS_MSG_NOR);
                         break;
                     case 1:
-                        MessageBox.Show(successMsgGer);
+                        MessageBox.Show(SUCCESS_MSG_GER);
                         break;
                     case 2:
-                        MessageBox.Show(successMsgEng);
+                        MessageBox.Show(SUCCESS_MSG_ENG);
                         break;
                     default:
-                        MessageBox.Show(successMsgNor);
+                        MessageBox.Show(SUCCESS_MSG_NOR);
                         break;
                 }
 
@@ -220,16 +220,16 @@ namespace WindowsFormsApp2
                 switch (mainSelectedLang)
                 {
                     case 0:
-                        MessageBox.Show(errorMsgNor);
+                        MessageBox.Show(ERROR_MSG_NOR);
                         break;
                     case 1:
-                        MessageBox.Show(errorMsgGer);
+                        MessageBox.Show(ERROR_MSG_GER);
                         break;
                     case 2:
-                        MessageBox.Show(errorMsgEng);
+                        MessageBox.Show(ERROR_MSG_ENG);
                         break;
                     default:
-                        MessageBox.Show(errorMsgNor);
+                        MessageBox.Show(ERROR_MSG_NOR);
                         break;
                 }
             }

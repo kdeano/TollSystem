@@ -18,20 +18,20 @@ namespace WindowsFormsApp2
         public string lastName { get; set; }
         public int passportNum { get; set; }
 
-        // Declaring global variables for error (wrong credentials) messages for all languages
-        private static string errorCredentialsMsgNor = "Feil: Kontroller at legitimasjonen din er riktig.";
-        private static string errorCredentialsMsgGer = "Fehler: Bitte stellen Sie sicher, dass Ihre Anmeldeinformationen korrekt sind.";
-        private static string errorCredentialsMsgEng = "Error: Please make sure your credentials are correct.";
+        // Declaring global consts for error (wrong credentials) messages for all languages
+        private const string ERROR_CREDS_MSG_NOR = "Feil: Kontroller at legitimasjonen din er riktig.";
+        private const string ERROR_CREDS_MSG_GER = "Fehler: Bitte stellen Sie sicher, dass Ihre Anmeldeinformationen korrekt sind.";
+        private const string ERROR_CREDS_MSG_ENG = "Error: Please make sure your credentials are correct.";
 
-        // Declaring global variables for error (empty strings) messages for all languages
-        private static string errorEmptyMsgNor = "Feil: Sørg for at alle tekstbokser er fylt ut.";
-        private static string errorEmptyMsgGer = "Fehler: Bitte stellen Sie sicher, dass alle Textfelder ausgefüllt sind.";
-        private static string errorEmptyMsgEng = "Error: Please make sure all text boxes are filled.";
+        // Declaring global consts for error (empty strings) messages for all languages
+        private const string ERROR_EMPTY_MSG_NOR = "Feil: Sørg for at alle tekstbokser er fylt ut.";
+        private const string ERROR_EMPTY_MSG_GER = "Fehler: Bitte stellen Sie sicher, dass alle Textfelder ausgefüllt sind.";
+        private const string ERROR_EMPTY_MSG_ENG = "Error: Please make sure all text boxes are filled.";
 
-        // Declaring global variables for success messages for all languages
-        private static string successMsgNor = "Suksess: Du har blitt logget inn.\n\nDu vil nå bli omdirigert for å legge til kjøretøy- og bankinformasjon.";
-        private static string successMsgGer = "Erfolg: Sie wurden angemeldet.\n\nSie werden nun weitergeleitet, um Fahrzeug- und Bankinformationen hinzuzufügen.";
-        private static string successMsgEng = "Success: You have been logged in.\n\nYou will now be redirected to add vehicle & bank information.";
+        // Declaring global consts for success messages for all languages
+        private const string SUCCESS_MSG_NOR = "Suksess: Du har blitt logget inn.\n\nDu vil nå bli omdirigert for å legge til kjøretøy- og bankinformasjon.";
+        private const string SUCCESS_MSG_GER = "Erfolg: Sie wurden angemeldet.\n\nSie werden nun weitergeleitet, um Fahrzeug- und Bankinformationen hinzuzufügen.";
+        private const string SUCCESS_MSG_ENG = "Success: You have been logged in.\n\nYou will now be redirected to add vehicle & bank information.";
 
         public Login()
         {
@@ -201,16 +201,16 @@ namespace WindowsFormsApp2
                 switch (mainSelectedLang)
                 {
                     case 0:
-                        MessageBox.Show(successMsgNor);
+                        MessageBox.Show(SUCCESS_MSG_NOR);
                         break;
                     case 1:
-                        MessageBox.Show(successMsgGer);
+                        MessageBox.Show(SUCCESS_MSG_GER);
                         break;
                     case 2:
-                        MessageBox.Show(successMsgEng);
+                        MessageBox.Show(SUCCESS_MSG_ENG);
                         break;
                     default:
-                        MessageBox.Show(successMsgNor);
+                        MessageBox.Show(SUCCESS_MSG_NOR);
                         break;
                 }
 
@@ -239,16 +239,16 @@ namespace WindowsFormsApp2
                 switch (mainSelectedLang)
                 {
                     case 0:
-                        MessageBox.Show(errorEmptyMsgNor);
+                        MessageBox.Show(ERROR_EMPTY_MSG_NOR);
                         break;
                     case 1:
-                        MessageBox.Show(errorEmptyMsgGer);
+                        MessageBox.Show(ERROR_EMPTY_MSG_GER);
                         break;
                     case 2:
-                        MessageBox.Show(errorEmptyMsgEng);
+                        MessageBox.Show(ERROR_EMPTY_MSG_ENG);
                         break;
                     default:
-                        MessageBox.Show(errorEmptyMsgNor);
+                        MessageBox.Show(ERROR_EMPTY_MSG_NOR);
                         break;
                 }
             } else
@@ -256,16 +256,16 @@ namespace WindowsFormsApp2
                 switch (mainSelectedLang)
                 {
                     case 0:
-                        MessageBox.Show(errorCredentialsMsgNor);
+                        MessageBox.Show(ERROR_CREDS_MSG_NOR);
                         break;
                     case 1:
-                        MessageBox.Show(errorCredentialsMsgGer);
+                        MessageBox.Show(ERROR_CREDS_MSG_GER);
                         break;
                     case 2:
-                        MessageBox.Show(errorCredentialsMsgEng);
+                        MessageBox.Show(ERROR_CREDS_MSG_ENG);
                         break;
                     default:
-                        MessageBox.Show(errorCredentialsMsgNor);
+                        MessageBox.Show(ERROR_CREDS_MSG_NOR);
                         break;
                 }
             }
