@@ -18,21 +18,6 @@ namespace WindowsFormsApp2
         public string lastName { get; set; }
         public int passportNum { get; set; }
 
-        // Declaring global consts for error (wrong credentials) messages for all languages
-        private const string ERROR_CREDS_MSG_NOR = "Feil: Kontroller at legitimasjonen din er riktig.";
-        private const string ERROR_CREDS_MSG_GER = "Fehler: Bitte stellen Sie sicher, dass Ihre Anmeldeinformationen korrekt sind.";
-        private const string ERROR_CREDS_MSG_ENG = "Error: Please make sure your credentials are correct.";
-
-        // Declaring global consts for error (empty strings) messages for all languages
-        private const string ERROR_EMPTY_MSG_NOR = "Feil: Sørg for at alle tekstbokser er fylt ut.";
-        private const string ERROR_EMPTY_MSG_GER = "Fehler: Bitte stellen Sie sicher, dass alle Textfelder ausgefüllt sind.";
-        private const string ERROR_EMPTY_MSG_ENG = "Error: Please make sure all text boxes are filled.";
-
-        // Declaring global consts for success messages for all languages
-        private const string SUCCESS_MSG_NOR = "Suksess: Du har blitt logget inn.\n\nDu vil nå bli omdirigert for å legge til kjøretøy- og bankinformasjon.";
-        private const string SUCCESS_MSG_GER = "Erfolg: Sie wurden angemeldet.\n\nSie werden nun weitergeleitet, um Fahrzeug- und Bankinformationen hinzuzufügen.";
-        private const string SUCCESS_MSG_ENG = "Success: You have been logged in.\n\nYou will now be redirected to add vehicle & bank information.";
-
         public Login()
         {
             InitializeComponent();
@@ -48,35 +33,35 @@ namespace WindowsFormsApp2
             {
                 case 0:
                     pbFlag.Image = Properties.Resources.norway;
+                    txtFirstName.Text = Translations.FIRST_NAME_NOR;
+                    txtLastName.Text = Translations.LAST_NAME_NOR;
+                    txtPassportNum.Text = Translations.PASSPORT_NUMBER_NOR;
+                    btnLogin.Text = Translations.LOGIN_NOR;
                     mainSelectedLang = 0;
-                    txtFirstName.Text = "Fornavn";
-                    txtLastName.Text = "Etternavn";
-                    txtPassportNum.Text = "Passnummer";
-                    btnLogin.Text = "Logg Inn";
                     break;
                 case 1:
                     pbFlag.Image = Properties.Resources.germany;
+                    txtFirstName.Text = Translations.FIRST_NAME_GER;
+                    txtLastName.Text = Translations.LAST_NAME_GER;
+                    txtPassportNum.Text = Translations.PASSPORT_NUMBER_GER;
+                    btnLogin.Text = Translations.LOGIN_GER;
                     mainSelectedLang = 1;
-                    txtFirstName.Text = "Vorname";
-                    txtLastName.Text = "Nachname";
-                    txtPassportNum.Text = "Ausweisnummer";
-                    btnLogin.Text = "Anmeldung";
                     break;
                 case 2:
                     pbFlag.Image = Properties.Resources.uk;
+                    txtFirstName.Text = Translations.FIRST_NAME_ENG;
+                    txtLastName.Text = Translations.LAST_NAME_ENG;
+                    txtPassportNum.Text = Translations.PASSPORT_NUMBER_ENG;
+                    btnLogin.Text = Translations.LOGIN_ENG;
                     mainSelectedLang = 2;
-                    txtFirstName.Text = "First name";
-                    txtLastName.Text = "Last name";
-                    txtPassportNum.Text = "Passport number";
-                    btnLogin.Text = "Login";
                     break;
                 default:
                     pbFlag.Image = Properties.Resources.norway;
+                    txtFirstName.Text = Translations.FIRST_NAME_NOR;
+                    txtLastName.Text = Translations.LAST_NAME_NOR;
+                    txtPassportNum.Text = Translations.PASSPORT_NUMBER_NOR;
+                    btnLogin.Text = Translations.LOGIN_NOR;
                     mainSelectedLang = 0;
-                    txtFirstName.Text = "Fornavn";
-                    txtLastName.Text = "Etternavn";
-                    txtPassportNum.Text = "Passnummer";
-                    btnLogin.Text = "Logg Inn";
                     break;
             }
         }
@@ -94,35 +79,35 @@ namespace WindowsFormsApp2
             {
                 case 0:
                     pbFlag.Image = Properties.Resources.norway;
+                    txtFirstName.Text = Translations.FIRST_NAME_NOR;
+                    txtLastName.Text = Translations.LAST_NAME_NOR;
+                    txtPassportNum.Text = Translations.PASSPORT_NUMBER_NOR;
+                    btnLogin.Text = Translations.LOGIN_NOR;
                     mainSelectedLang = 0;
-                    txtFirstName.Text = "Fornavn";
-                    txtLastName.Text = "Etternavn";
-                    txtPassportNum.Text = "Passnummer";
-                    btnLogin.Text = "Logg Inn";
                     break;
                 case 1:
                     pbFlag.Image = Properties.Resources.germany;
+                    txtFirstName.Text = Translations.FIRST_NAME_GER;
+                    txtLastName.Text = Translations.LAST_NAME_GER;
+                    txtPassportNum.Text = Translations.PASSPORT_NUMBER_GER;
+                    btnLogin.Text = Translations.LOGIN_GER;
                     mainSelectedLang = 1;
-                    txtFirstName.Text = "Vorname";
-                    txtLastName.Text = "Nachname";
-                    txtPassportNum.Text = "Ausweisnummer";
-                    btnLogin.Text = "Anmeldung";
                     break;
                 case 2:
                     pbFlag.Image = Properties.Resources.uk;
+                    txtFirstName.Text = Translations.FIRST_NAME_ENG;
+                    txtLastName.Text = Translations.LAST_NAME_ENG;
+                    txtPassportNum.Text = Translations.PASSPORT_NUMBER_ENG;
+                    btnLogin.Text = Translations.LOGIN_ENG;
                     mainSelectedLang = 2;
-                    txtFirstName.Text = "First name";
-                    txtLastName.Text = "Last name";
-                    txtPassportNum.Text = "Passport number";
-                    btnLogin.Text = "Login";
                     break;
                 default:
                     pbFlag.Image = Properties.Resources.norway;
+                    txtFirstName.Text = Translations.FIRST_NAME_NOR;
+                    txtLastName.Text = Translations.LAST_NAME_NOR;
+                    txtPassportNum.Text = Translations.PASSPORT_NUMBER_NOR;
+                    btnLogin.Text = Translations.LOGIN_NOR;
                     mainSelectedLang = 0;
-                    txtFirstName.Text = "Fornavn";
-                    txtLastName.Text = "Etternavn";
-                    txtPassportNum.Text = "Passnummer";
-                    btnLogin.Text = "Logg Inn";
                     break;
             }
         }
@@ -134,9 +119,9 @@ namespace WindowsFormsApp2
         private void txtFirstName_Click(object sender, EventArgs e)
         {
             if (txtFirstName.Text.Length < 1 ||
-                txtFirstName.Text == "Fornavn" ||
-                txtFirstName.Text == "Vorname" ||
-                txtFirstName.Text == "First name")
+                txtFirstName.Text == Translations.FIRST_NAME_NOR ||
+                txtFirstName.Text == Translations.FIRST_NAME_GER ||
+                txtFirstName.Text == Translations.FIRST_NAME_ENG)
             {
                 txtFirstName.Clear();
             }
@@ -145,9 +130,9 @@ namespace WindowsFormsApp2
         private void txtLastName_Click(object sender, EventArgs e)
         {
             if (txtLastName.Text.Length < 1 ||
-                txtLastName.Text == "Etternavn" ||
-                txtLastName.Text == "Nachname" ||
-                txtLastName.Text == "Last name")
+                txtLastName.Text == Translations.LAST_NAME_NOR ||
+                txtLastName.Text == Translations.LAST_NAME_GER ||
+                txtLastName.Text == Translations.LAST_NAME_ENG)
             {
                 txtLastName.Clear();
             }
@@ -156,9 +141,9 @@ namespace WindowsFormsApp2
         private void txtPassportNum_Click(object sender, EventArgs e)
         {
             if (txtPassportNum.Text.Length < 1 ||
-                txtPassportNum.Text == "Passnummer" ||
-                txtPassportNum.Text == "Ausweisnummer" ||
-                txtPassportNum.Text == "Passport number")
+                txtPassportNum.Text == Translations.PASSPORT_NUMBER_NOR ||
+                txtPassportNum.Text == Translations.PASSPORT_NUMBER_GER ||
+                txtPassportNum.Text == Translations.PASSPORT_NUMBER_ENG)
             {
                 txtPassportNum.Clear();
             }
@@ -201,16 +186,16 @@ namespace WindowsFormsApp2
                 switch (mainSelectedLang)
                 {
                     case 0:
-                        MessageBox.Show(SUCCESS_MSG_NOR);
+                        MessageBox.Show(Translations.SUCCESS_LOGIN_MSG_NOR);
                         break;
                     case 1:
-                        MessageBox.Show(SUCCESS_MSG_GER);
+                        MessageBox.Show(Translations.SUCCESS_LOGIN_MSG_GER);
                         break;
                     case 2:
-                        MessageBox.Show(SUCCESS_MSG_ENG);
+                        MessageBox.Show(Translations.SUCCESS_LOGIN_MSG_ENG);
                         break;
                     default:
-                        MessageBox.Show(SUCCESS_MSG_NOR);
+                        MessageBox.Show(Translations.SUCCESS_LOGIN_MSG_NOR);
                         break;
                 }
 
@@ -239,16 +224,16 @@ namespace WindowsFormsApp2
                 switch (mainSelectedLang)
                 {
                     case 0:
-                        MessageBox.Show(ERROR_EMPTY_MSG_NOR);
+                        MessageBox.Show(Translations.ERROR_EMPTY_MSG_NOR);
                         break;
                     case 1:
-                        MessageBox.Show(ERROR_EMPTY_MSG_GER);
+                        MessageBox.Show(Translations.ERROR_EMPTY_MSG_GER);
                         break;
                     case 2:
-                        MessageBox.Show(ERROR_EMPTY_MSG_ENG);
+                        MessageBox.Show(Translations.ERROR_EMPTY_MSG_ENG);
                         break;
                     default:
-                        MessageBox.Show(ERROR_EMPTY_MSG_NOR);
+                        MessageBox.Show(Translations.ERROR_EMPTY_MSG_NOR);
                         break;
                 }
             } else
@@ -256,16 +241,16 @@ namespace WindowsFormsApp2
                 switch (mainSelectedLang)
                 {
                     case 0:
-                        MessageBox.Show(ERROR_CREDS_MSG_NOR);
+                        MessageBox.Show(Translations.ERROR_CREDS_MSG_NOR);
                         break;
                     case 1:
-                        MessageBox.Show(ERROR_CREDS_MSG_GER);
+                        MessageBox.Show(Translations.ERROR_CREDS_MSG_GER);
                         break;
                     case 2:
-                        MessageBox.Show(ERROR_CREDS_MSG_ENG);
+                        MessageBox.Show(Translations.ERROR_CREDS_MSG_ENG);
                         break;
                     default:
-                        MessageBox.Show(ERROR_CREDS_MSG_NOR);
+                        MessageBox.Show(Translations.ERROR_CREDS_MSG_NOR);
                         break;
                 }
             }

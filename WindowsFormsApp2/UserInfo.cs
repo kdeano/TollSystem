@@ -17,21 +17,6 @@ namespace WindowsFormsApp2
         public static string carModel = "";
         public static string regNum = "";
 
-        // Declaring global consts for error (unknown) messages for all languages
-        private const string ERROR_OTHER_MSG_NOR = "Feil: Ukjent feil oppstod - prøv igjen.";
-        private const string ERROR_OTHER_MSG_GER = "Fehler: Unbekannter Fehler aufgetreten - bitte versuchen Sie es erneut.";
-        private const string ERROR_OTHER_MSG_ENG = "Error: Unknown error occurred - please try again.";
-
-        // Declaring global consts for error (empty strings) messages for all languages
-        private const string ERROR_EMPTY_MSG_NOR = "Feil: Sørg for at alle tekstbokser er fylt ut.";
-        private const string ERROR_EMPTY_MSG_GER = "Fehler: Bitte stellen Sie sicher, dass alle Textfelder ausgefüllt sind.";
-        private const string ERROR_EMPTY_MSG_ENG = "Error: Please make sure all text boxes are filled.";
-
-        // Declaring global consts for success messages for all languages
-        private const string SUCCESS_MSG_NOR = "Suksess: Skriv inn bankdetaljene dine nå.";
-        private const string SUCCESS_MSG_GER = "Erfolgreich: Bitte geben Sie nun Ihre Bankverbindung ein.";
-        private const string SUCCESS_MSG_ENG = "Success: Now please enter your bank details.";
-
         public UserInfo()
         {
             InitializeComponent();
@@ -46,30 +31,30 @@ namespace WindowsFormsApp2
             {
                 case 0:
                     pbFlag.Image = Properties.Resources.norway;
-                    txtCarModel.Text = "Bilmodell";
-                    txtRegNum.Text = "Registreringsnummer";
-                    btnSubmitCar.Text = "Sende inn";
+                    txtCarModel.Text = Translations.CAR_MODEL_NOR;
+                    txtRegNum.Text = Translations.CAR_REG_NUMBER_NOR;
+                    btnSubmitCar.Text = Translations.SUBMIT_NOR;
                     mainSelectedLang = 0;
                     break;
                 case 1:
                     pbFlag.Image = Properties.Resources.germany;
-                    txtCarModel.Text = "Auto Model";
-                    txtRegNum.Text = "Registrationsnummer";
-                    btnSubmitCar.Text = "Einreichen";
+                    txtCarModel.Text = Translations.CAR_MODEL_GER;
+                    txtRegNum.Text = Translations.CAR_REG_NUMBER_GER;
+                    btnSubmitCar.Text = Translations.SUBMIT_GER;
                     mainSelectedLang = 1;
                     break;
                 case 2:
                     pbFlag.Image = Properties.Resources.uk;
-                    txtCarModel.Text = "Car model";
-                    txtRegNum.Text = "Registration number";
-                    btnSubmitCar.Text = "Submit";
+                    txtCarModel.Text = Translations.CAR_MODEL_ENG;
+                    txtRegNum.Text = Translations.CAR_REG_NUMBER_ENG;
+                    btnSubmitCar.Text = Translations.SUBMIT_ENG;
                     mainSelectedLang = 2;
                     break;
                 default:
                     pbFlag.Image = Properties.Resources.norway;
-                    txtCarModel.Text = "Bilmodell";
-                    txtRegNum.Text = "Registreringsnummer";
-                    btnSubmitCar.Text = "Sende inn";
+                    txtCarModel.Text = Translations.CAR_MODEL_NOR;
+                    txtRegNum.Text = Translations.CAR_REG_NUMBER_NOR;
+                    btnSubmitCar.Text = Translations.SUBMIT_NOR;
                     mainSelectedLang = 0;
                     break;
             }
@@ -88,50 +73,50 @@ namespace WindowsFormsApp2
             {
                 case 0:
                     pbFlag.Image = Properties.Resources.norway;
-                    txtCarModel.Text = "Bilmodell";
-                    txtRegNum.Text = "Registreringsnummer";
-                    btnSubmitCar.Text = "Sende inn";
-                    txtAccountName.Text = "Brukernavn";
-                    txtCardNum.Text = "Kortnummer";
-                    lblExpiryDate.Text = "Utløpsdato";
-                    txtSecurityCode.Text = "Kort sikkerhetskode";
-                    btnSubmitBank.Text = "Sende inn";
+                    txtCarModel.Text = Translations.CAR_MODEL_NOR;
+                    txtRegNum.Text = Translations.CAR_REG_NUMBER_NOR;
+                    btnSubmitCar.Text = Translations.SUBMIT_NOR;
+                    txtAccountName.Text = Translations.ACCOUNT_NAME_NOR;
+                    txtCardNum.Text = Translations.CARD_NUMBER_NOR;
+                    lblExpiryDate.Text = Translations.EXPIRY_DATE_NOR;
+                    txtSecurityCode.Text = Translations.CARD_SECURITY_CODE_NOR;
+                    btnSubmitBank.Text = Translations.SUBMIT_NOR;
                     mainSelectedLang = 0;
                     break;
                 case 1:
                     pbFlag.Image = Properties.Resources.germany;
-                    txtCarModel.Text = "Auto Model";
-                    txtRegNum.Text = "Registrationsnummer";
-                    btnSubmitCar.Text = "Einreichen";
-                    txtAccountName.Text = "Kontobezeichnung";
-                    txtCardNum.Text = "Kartennummer";
-                    lblExpiryDate.Text = "Verfallsdatum";
-                    txtSecurityCode.Text = "Karten-Sicherheitscode";
-                    btnSubmitBank.Text = "Einreichen";
+                    txtCarModel.Text = Translations.CAR_MODEL_GER;
+                    txtRegNum.Text = Translations.CAR_REG_NUMBER_GER;
+                    btnSubmitCar.Text = Translations.SUBMIT_GER;
+                    txtAccountName.Text = Translations.ACCOUNT_NAME_GER;
+                    txtCardNum.Text = Translations.CARD_NUMBER_GER;
+                    lblExpiryDate.Text = Translations.EXPIRY_DATE_GER;
+                    txtSecurityCode.Text = Translations.CARD_SECURITY_CODE_GER;
+                    btnSubmitBank.Text = Translations.SUBMIT_GER;
                     mainSelectedLang = 1;
                     break;
                 case 2:
                     pbFlag.Image = Properties.Resources.uk;
-                    txtCarModel.Text = "Car model";
-                    txtRegNum.Text = "Registration number";
-                    btnSubmitCar.Text = "Submit";
-                    txtAccountName.Text = "Account name";
-                    txtCardNum.Text = "Card number";
-                    lblExpiryDate.Text = "Expiry date";
-                    txtSecurityCode.Text = "Card security code";
-                    btnSubmitBank.Text = "Submit";
+                    txtCarModel.Text = Translations.CAR_MODEL_ENG;
+                    txtRegNum.Text = Translations.CAR_REG_NUMBER_ENG;
+                    btnSubmitCar.Text = Translations.SUBMIT_ENG;
+                    txtAccountName.Text = Translations.ACCOUNT_NAME_ENG;
+                    txtCardNum.Text = Translations.CARD_NUMBER_ENG;
+                    lblExpiryDate.Text = Translations.EXPIRY_DATE_ENG;
+                    txtSecurityCode.Text = Translations.CARD_SECURITY_CODE_ENG;
+                    btnSubmitBank.Text = Translations.SUBMIT_ENG;
                     mainSelectedLang = 2;
                     break;
                 default:
                     pbFlag.Image = Properties.Resources.norway;
-                    txtCarModel.Text = "Bilmodell";
-                    txtRegNum.Text = "Registreringsnummer";
-                    btnSubmitCar.Text = "Sende inn";
-                    txtAccountName.Text = "Brukernavn";
-                    txtCardNum.Text = "Kortnummer";
-                    lblExpiryDate.Text = "Utløpsdato";
-                    txtSecurityCode.Text = "Kort sikkerhetskode";
-                    btnSubmitBank.Text = "Sende inn";
+                    txtCarModel.Text = Translations.CAR_MODEL_NOR;
+                    txtRegNum.Text = Translations.CAR_REG_NUMBER_NOR;
+                    btnSubmitCar.Text = Translations.SUBMIT_NOR;
+                    txtAccountName.Text = Translations.ACCOUNT_NAME_NOR;
+                    txtCardNum.Text = Translations.CARD_NUMBER_NOR;
+                    lblExpiryDate.Text = Translations.EXPIRY_DATE_NOR;
+                    txtSecurityCode.Text = Translations.CARD_SECURITY_CODE_NOR;
+                    btnSubmitBank.Text = Translations.SUBMIT_NOR;
                     mainSelectedLang = 0;
                     break;
             }
@@ -144,9 +129,9 @@ namespace WindowsFormsApp2
         private void txtCarModel_Click(object sender, EventArgs e)
         {
             if (txtCarModel.Text.Length < 1 ||
-                txtCarModel.Text == "Bilmodell" ||
-                txtCarModel.Text == "Auto Model" ||
-                txtCarModel.Text == "Car model")
+                txtCarModel.Text == Translations.CAR_MODEL_NOR ||
+                txtCarModel.Text == Translations.CAR_MODEL_GER ||
+                txtCarModel.Text == Translations.CAR_MODEL_ENG)
             {
                 txtCarModel.Clear();
             }
@@ -155,9 +140,9 @@ namespace WindowsFormsApp2
         private void txtRegNum_Click(object sender, EventArgs e)
         {
             if (txtRegNum.Text.Length < 1 ||
-                txtRegNum.Text == "Registreringsnummer" ||
-                txtRegNum.Text == "Registrationsnummer" ||
-                txtRegNum.Text == "Registration number")
+                txtRegNum.Text == Translations.CAR_REG_NUMBER_NOR ||
+                txtRegNum.Text == Translations.CAR_REG_NUMBER_GER ||
+                txtRegNum.Text == Translations.CAR_REG_NUMBER_ENG)
             {
                 txtRegNum.Clear();
             }
@@ -166,9 +151,9 @@ namespace WindowsFormsApp2
         private void txtAccountName_Click(object sender, EventArgs e)
         {
             if (txtAccountName.Text.Length < 1 ||
-                txtAccountName.Text == "Brukernavn" ||
-                txtAccountName.Text == "Kontobezeichnung" ||
-                txtAccountName.Text == "Account name")
+                txtAccountName.Text == Translations.ACCOUNT_NAME_NOR ||
+                txtAccountName.Text == Translations.ACCOUNT_NAME_GER ||
+                txtAccountName.Text == Translations.ACCOUNT_NAME_ENG)
             {
                 txtAccountName.Clear();
             }
@@ -177,9 +162,9 @@ namespace WindowsFormsApp2
         private void txtCardNum_Click(object sender, EventArgs e)
         {
             if (txtCardNum.Text.Length < 1 ||
-                txtCardNum.Text == "Kortnummer" ||
-                txtCardNum.Text == "Kartennummer" ||
-                txtCardNum.Text == "Card number")
+                txtCardNum.Text == Translations.CARD_NUMBER_NOR ||
+                txtCardNum.Text == Translations.CARD_NUMBER_GER ||
+                txtCardNum.Text == Translations.CARD_NUMBER_ENG)
             {
                 txtCardNum.Clear();
             }
@@ -188,9 +173,9 @@ namespace WindowsFormsApp2
         private void txtSecurityCode_Click(object sender, EventArgs e)
         {
             if (txtSecurityCode.Text.Length < 1 ||
-                txtSecurityCode.Text == "Kort sikkerhetskode" ||
-                txtSecurityCode.Text == "Karten-Sicherheitscode" ||
-                txtSecurityCode.Text == "Card security code")
+                txtSecurityCode.Text == Translations.CARD_SECURITY_CODE_NOR ||
+                txtSecurityCode.Text == Translations.CARD_SECURITY_CODE_GER ||
+                txtSecurityCode.Text == Translations.CARD_SECURITY_CODE_ENG)
             {
                 txtSecurityCode.Clear();
             }
@@ -240,36 +225,36 @@ namespace WindowsFormsApp2
                 switch (mainSelectedLang)
                 {
                     case 0:
-                        MessageBox.Show(SUCCESS_MSG_NOR);
-                        txtAccountName.Text = "Brukernavn";
-                        txtCardNum.Text = "Kortnummer";
-                        lblExpiryDate.Text = "Utløpsdato";
-                        txtSecurityCode.Text = "Kort sikkerhetskode";
-                        btnSubmitBank.Text = "Sende inn";
+                        MessageBox.Show(Translations.SUCCESS_CAR_MSG_NOR);
+                        txtAccountName.Text = Translations.ACCOUNT_NAME_NOR;
+                        txtCardNum.Text = Translations.CARD_NUMBER_NOR;
+                        lblExpiryDate.Text = Translations.EXPIRY_DATE_NOR;
+                        txtSecurityCode.Text = Translations.CARD_SECURITY_CODE_NOR;
+                        btnSubmitBank.Text = Translations.SUBMIT_NOR;
                         break;
                     case 1:
-                        MessageBox.Show(SUCCESS_MSG_GER);
-                        txtAccountName.Text = "Kontobezeichnung";
-                        txtCardNum.Text = "Kartennummer";
-                        lblExpiryDate.Text = "Verfallsdatum";
-                        txtSecurityCode.Text = "Karten-Sicherheitscode";
-                        btnSubmitBank.Text = "Einreichen";
+                        MessageBox.Show(Translations.SUCCESS_CAR_MSG_GER);
+                        txtAccountName.Text = Translations.ACCOUNT_NAME_GER;
+                        txtCardNum.Text = Translations.CARD_NUMBER_GER;
+                        lblExpiryDate.Text = Translations.EXPIRY_DATE_GER;
+                        txtSecurityCode.Text = Translations.CARD_SECURITY_CODE_GER;
+                        btnSubmitBank.Text = Translations.SUBMIT_GER;
                         break;
                     case 2:
-                        MessageBox.Show(SUCCESS_MSG_ENG);
-                        txtAccountName.Text = "Account name";
-                        txtCardNum.Text = "Card number";
-                        lblExpiryDate.Text = "Expiry date";
-                        txtSecurityCode.Text = "Card security code";
-                        btnSubmitBank.Text = "Submit";
+                        MessageBox.Show(Translations.SUCCESS_CAR_MSG_ENG);
+                        txtAccountName.Text = Translations.ACCOUNT_NAME_ENG;
+                        txtCardNum.Text = Translations.CARD_NUMBER_ENG;
+                        lblExpiryDate.Text = Translations.EXPIRY_DATE_ENG;
+                        txtSecurityCode.Text = Translations.CARD_SECURITY_CODE_ENG;
+                        btnSubmitBank.Text = Translations.SUBMIT_ENG;
                         break;
                     default:
-                        MessageBox.Show(SUCCESS_MSG_NOR);
-                        txtAccountName.Text = "Brukernavn";
-                        txtCardNum.Text = "Kortnummer";
-                        lblExpiryDate.Text = "Utløpsdato";
-                        txtSecurityCode.Text = "Kort sikkerhetskode";
-                        btnSubmitBank.Text = "Sende inn";
+                        MessageBox.Show(Translations.SUCCESS_CAR_MSG_NOR);
+                        txtAccountName.Text = Translations.ACCOUNT_NAME_NOR;
+                        txtCardNum.Text = Translations.CARD_NUMBER_NOR;
+                        lblExpiryDate.Text = Translations.EXPIRY_DATE_NOR;
+                        txtSecurityCode.Text = Translations.CARD_SECURITY_CODE_NOR;
+                        btnSubmitBank.Text = Translations.SUBMIT_NOR;
                         break;
                 }
 
@@ -292,16 +277,16 @@ namespace WindowsFormsApp2
                 switch (mainSelectedLang)
                 {
                     case 0:
-                        MessageBox.Show(ERROR_EMPTY_MSG_NOR);
+                        MessageBox.Show(Translations.ERROR_EMPTY_MSG_NOR);
                         break;
                     case 1:
-                        MessageBox.Show(ERROR_EMPTY_MSG_GER);
+                        MessageBox.Show(Translations.ERROR_EMPTY_MSG_GER);
                         break;
                     case 2:
-                        MessageBox.Show(ERROR_EMPTY_MSG_ENG);
+                        MessageBox.Show(Translations.ERROR_EMPTY_MSG_ENG);
                         break;
                     default:
-                        MessageBox.Show(ERROR_EMPTY_MSG_NOR);
+                        MessageBox.Show(Translations.ERROR_EMPTY_MSG_NOR);
                         break;
                 }
             } else
@@ -309,16 +294,16 @@ namespace WindowsFormsApp2
                 switch (mainSelectedLang)
                 {
                     case 0:
-                        MessageBox.Show(ERROR_OTHER_MSG_NOR);
+                        MessageBox.Show(Translations.ERROR_OTHER_MSG_NOR);
                         break;
                     case 1:
-                        MessageBox.Show(ERROR_OTHER_MSG_GER);
+                        MessageBox.Show(Translations.ERROR_OTHER_MSG_GER);
                         break;
                     case 2:
-                        MessageBox.Show(ERROR_OTHER_MSG_ENG);
+                        MessageBox.Show(Translations.ERROR_OTHER_MSG_ENG);
                         break;
                     default:
-                        MessageBox.Show(ERROR_OTHER_MSG_NOR);
+                        MessageBox.Show(Translations.ERROR_OTHER_MSG_NOR);
                         break;
                 }
             }

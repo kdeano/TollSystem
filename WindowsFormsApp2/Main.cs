@@ -13,7 +13,6 @@ namespace WindowsFormsApp2
     public partial class Main : Form
     {
         // Global variable to store selected language data across forms
-        // 0 (default) = Norwegian
         private static int selectedLang = 0;
 
         public Main()
@@ -38,30 +37,30 @@ namespace WindowsFormsApp2
             {
                 case 0:
                     pbFlag.Image = Properties.Resources.norway;
-                    lblWelcome.Text = "Velkommen!";
-                    btnSignUp.Text = "Melde deg på";
-                    btnLogin.Text = "Logg Inn";
+                    lblWelcome.Text = Translations.WELCOME_NOR;
+                    btnSignUp.Text = Translations.SIGNUP_NOR;
+                    btnLogin.Text = Translations.LOGIN_NOR;
                     selectedLang = 0;
                     break;
                 case 1:
                     pbFlag.Image = Properties.Resources.germany;
-                    lblWelcome.Text = "Willkommen!";
-                    btnSignUp.Text = "Anmelden";
-                    btnLogin.Text = "Einloggen";
+                    lblWelcome.Text = Translations.WELCOME_GER;
+                    btnSignUp.Text = Translations.SIGNUP_GER;
+                    btnLogin.Text = Translations.LOGIN_GER;
                     selectedLang = 1;
                     break;
                 case 2:
                     pbFlag.Image = Properties.Resources.uk;
-                    lblWelcome.Text = "Welcome!";
-                    btnSignUp.Text = "Sign up";
-                    btnLogin.Text = "Log in";
+                    lblWelcome.Text = Translations.WELCOME_ENG;
+                    btnSignUp.Text = Translations.SIGNUP_ENG;
+                    btnLogin.Text = Translations.LOGIN_ENG;
                     selectedLang = 2;
                     break;
                 default:
                     pbFlag.Image = Properties.Resources.norway;
-                    lblWelcome.Text = "Velkommen!";
-                    btnSignUp.Text = "Melde deg på";
-                    btnLogin.Text = "Logg Inn";
+                    lblWelcome.Text = Translations.WELCOME_NOR;
+                    btnSignUp.Text = Translations.SIGNUP_NOR;
+                    btnLogin.Text = Translations.LOGIN_NOR;
                     selectedLang = 0;
                     break;
             }
