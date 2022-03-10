@@ -21,6 +21,10 @@ namespace WindowsFormsApp2
             InitializeComponent();
         }
 
+        ///
+        /// Creates a switch case on language selection and applies to selected language variable
+        ///
+
         private void cbLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
             int selectedIndex = cbLanguage.SelectedIndex;
@@ -63,6 +67,10 @@ namespace WindowsFormsApp2
             }
         }
 
+        ///
+        /// Creates instance of SignUp form and passes the selected language data
+        ///
+
         private void btnSignUp_Click(object sender, EventArgs e)
         {
             SignUp formSignUp = new SignUp();
@@ -70,6 +78,10 @@ namespace WindowsFormsApp2
             formSignUp.mainSelectedLang = selectedLang;
             formSignUp.ShowDialog();
         }
+
+        ///
+        /// Creates instance of Login form and passes all data from Main and SignUp forms
+        ///
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -82,6 +94,10 @@ namespace WindowsFormsApp2
             
             formLogin.ShowDialog();
         }
+
+        ///
+        /// Exits the application (closes all forms) on exit button click
+        ///
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {

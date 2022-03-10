@@ -12,12 +12,15 @@ namespace WindowsFormsApp2
 {
     public partial class SignUp : Form
     {
+        // Declaring global variable to get and set selected language
+        public int mainSelectedLang { get; set; }
+
         // Declaring global variables to pass text box data to Login form
         public static string signUpFirstName;
         public static string signUpLastName;
         public static int signUpPassportNum;
 
-        // Dcelaring global variables for error messages for all languages
+        // Declaring global variables for error messages for all languages
         private static string errorMsgNor = "Feil: Sørg for at alle tekstbokser er fylt ut.";
         private static string errorMsgGer = "Fehler: Bitte stellen Sie sicher, dass alle Textfelder ausgefüllt sind.";
         private static string errorMsgEng = "Error: Please make sure all text boxes are filled.";
@@ -26,9 +29,6 @@ namespace WindowsFormsApp2
         private static string successMsgNor = "Suksess: Fortsett for å logge på.";
         private static string successMsgGer = "Erfolgreich: Bitte melden Sie sich an.";
         private static string successMsgEng = "Success: Please proceed to log in.";
-
-        // Declaring global variable to get and set selected language
-        public int mainSelectedLang { get; set; }
 
         public SignUp()
         {
@@ -236,12 +236,12 @@ namespace WindowsFormsApp2
         }
 
         ///
-        /// Hides this form on exit click (closing causes stack overflow errors)
+        /// Closes this form on exit click to release memory
         ///
 
-        private void SignUp_FormClosing(object sender, FormClosingEventArgs e)
+        private void SignUp_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Hide();
+            Close();
         }
     }
 }

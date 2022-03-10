@@ -30,11 +30,11 @@ namespace WindowsFormsApp2
         private void InitializeComponent()
         {
             this.cbLanguage = new System.Windows.Forms.ComboBox();
-            this.pbFlag = new System.Windows.Forms.PictureBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtPassportNum = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.pbFlag = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbFlag)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,16 +53,6 @@ namespace WindowsFormsApp2
             this.cbLanguage.TabIndex = 8;
             this.cbLanguage.Text = "Change language";
             this.cbLanguage.SelectedIndexChanged += new System.EventHandler(this.cbLanguage_SelectedIndexChanged);
-            // 
-            // pbFlag
-            // 
-            this.pbFlag.Image = global::WindowsFormsApp2.Properties.Resources.norway;
-            this.pbFlag.Location = new System.Drawing.Point(418, 0);
-            this.pbFlag.Name = "pbFlag";
-            this.pbFlag.Size = new System.Drawing.Size(166, 91);
-            this.pbFlag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbFlag.TabIndex = 7;
-            this.pbFlag.TabStop = false;
             // 
             // btnLogin
             // 
@@ -89,6 +79,7 @@ namespace WindowsFormsApp2
             this.txtPassportNum.TabIndex = 13;
             this.txtPassportNum.Text = "Passnummer";
             this.txtPassportNum.Click += new System.EventHandler(this.txtPassportNum_Click);
+            this.txtPassportNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassportNum_KeyPress);
             // 
             // txtLastName
             // 
@@ -103,6 +94,7 @@ namespace WindowsFormsApp2
             this.txtLastName.TabIndex = 12;
             this.txtLastName.Text = "Etternavn";
             this.txtLastName.Click += new System.EventHandler(this.txtLastName_Click);
+            this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtFirstName
             // 
@@ -117,6 +109,17 @@ namespace WindowsFormsApp2
             this.txtFirstName.TabIndex = 11;
             this.txtFirstName.Text = "Fornavn";
             this.txtFirstName.Click += new System.EventHandler(this.txtFirstName_Click);
+            this.txtFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFirstName_KeyPress);
+            // 
+            // pbFlag
+            // 
+            this.pbFlag.Image = global::WindowsFormsApp2.Properties.Resources.norway;
+            this.pbFlag.Location = new System.Drawing.Point(418, 0);
+            this.pbFlag.Name = "pbFlag";
+            this.pbFlag.Size = new System.Drawing.Size(166, 91);
+            this.pbFlag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFlag.TabIndex = 7;
+            this.pbFlag.TabStop = false;
             // 
             // Login
             // 
@@ -133,6 +136,7 @@ namespace WindowsFormsApp2
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Toll System | Login";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbFlag)).EndInit();
             this.ResumeLayout(false);
