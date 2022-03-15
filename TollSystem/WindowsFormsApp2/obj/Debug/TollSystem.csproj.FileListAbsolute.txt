@@ -1,0 +1,16 @@
+C:\Users\flemm\Source\Repos\TollSystem\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+C:\Users\flemm\Source\Repos\TollSystem\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+C:\Users\flemm\Source\Repos\TollSystem\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+C:\Users\flemm\Source\Repos\TollSystem\WindowsFormsApp2\obj\Debug\TollSystem.csprojAssemblyReference.cache
+C:\Users\flemm\Source\Repos\TollSystem\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Login.resources
+C:\Users\flemm\Source\Repos\TollSystem\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Main.resources
+C:\Users\flemm\Source\Repos\TollSystem\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\flemm\Source\Repos\TollSystem\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.SignUp.resources
+C:\Users\flemm\Source\Repos\TollSystem\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.UserInfo.resources
+C:\Users\flemm\Source\Repos\TollSystem\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.UserPanel.resources
+C:\Users\flemm\Source\Repos\TollSystem\WindowsFormsApp2\obj\Debug\TollSystem.csproj.GenerateResource.cache
+C:\Users\flemm\Source\Repos\TollSystem\WindowsFormsApp2\obj\Debug\TollSystem.csproj.CoreCompileInputs.cache
+C:\Users\flemm\Source\Repos\TollSystem\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+C:\Users\flemm\Source\Repos\TollSystem\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\flemm\Source\Repos\TollSystem\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.OperatorPanel.resources
+C:\Users\flemm\Source\Repos\TollSystem\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.CalculateBillPanel.resources
