@@ -51,7 +51,7 @@ namespace WindowsFormsApp2
             "German",
             "English"});
             this.cbLanguage.Location = new System.Drawing.Point(557, 119);
-            this.cbLanguage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbLanguage.Margin = new System.Windows.Forms.Padding(4);
             this.cbLanguage.Name = "cbLanguage";
             this.cbLanguage.Size = new System.Drawing.Size(220, 31);
             this.cbLanguage.TabIndex = 8;
@@ -63,7 +63,7 @@ namespace WindowsFormsApp2
             this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnLogin.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold);
             this.btnLogin.Location = new System.Drawing.Point(249, 553);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(267, 62);
             this.btnLogin.TabIndex = 14;
@@ -78,7 +78,7 @@ namespace WindowsFormsApp2
             this.txtPassportNum.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold);
             this.txtPassportNum.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txtPassportNum.Location = new System.Drawing.Point(133, 426);
-            this.txtPassportNum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassportNum.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassportNum.MaxLength = 50;
             this.txtPassportNum.Name = "txtPassportNum";
             this.txtPassportNum.Size = new System.Drawing.Size(515, 52);
@@ -94,7 +94,7 @@ namespace WindowsFormsApp2
             this.txtLastName.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold);
             this.txtLastName.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txtLastName.Location = new System.Drawing.Point(133, 334);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(4);
             this.txtLastName.MaxLength = 50;
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(515, 52);
@@ -110,7 +110,7 @@ namespace WindowsFormsApp2
             this.txtFirstName.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold);
             this.txtFirstName.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txtFirstName.Location = new System.Drawing.Point(133, 241);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFirstName.MaxLength = 50;
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(515, 52);
@@ -125,7 +125,7 @@ namespace WindowsFormsApp2
             this.btnOperator.Name = "btnOperator";
             this.btnOperator.Size = new System.Drawing.Size(153, 47);
             this.btnOperator.TabIndex = 15;
-            this.btnOperator.Text = "Toll Operator Login";
+            this.btnOperator.Text = "Bompengeoperatør Pålogging";
             this.btnOperator.UseVisualStyleBackColor = true;
             this.btnOperator.Click += new System.EventHandler(this.opLoginBTN_Click);
             // 
@@ -141,7 +141,7 @@ namespace WindowsFormsApp2
             this.txtOpPass.Name = "txtOpPass";
             this.txtOpPass.Size = new System.Drawing.Size(515, 52);
             this.txtOpPass.TabIndex = 16;
-            this.txtOpPass.Text = "Password";
+            this.txtOpPass.Text = "Passord";
             this.txtOpPass.Visible = false;
             // 
             // btnTransDept
@@ -150,7 +150,7 @@ namespace WindowsFormsApp2
             this.btnTransDept.Name = "btnTransDept";
             this.btnTransDept.Size = new System.Drawing.Size(153, 47);
             this.btnTransDept.TabIndex = 17;
-            this.btnTransDept.Text = "Transport Dept Login";
+            this.btnTransDept.Text = "Transportavdelingen Pålogging";
             this.btnTransDept.UseVisualStyleBackColor = true;
             this.btnTransDept.Click += new System.EventHandler(this.btnTransDept_Click);
             // 
@@ -180,7 +180,7 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.cbLanguage);
             this.Controls.Add(this.pbFlag);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Toll System | Login";
