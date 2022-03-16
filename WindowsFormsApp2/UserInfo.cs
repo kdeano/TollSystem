@@ -14,15 +14,21 @@ namespace WindowsFormsApp2
     {
         public int mainSelectedLang { get; set; }
         public string firstName { get; set; }
-        public static string carModel = "";
-        public static string regNum = "";
+
+        public static string carModel;
+        public static string carRegNumber;
+        public static string bankAccountName;
+        public static int bankCardNumber;
+        public static int bankSecurityCode;
+        public static int bankCardExpiryMonth;
+        public static int bankCardExpiryYear;
 
         public UserInfo()
         {
             InitializeComponent();
 
             firstName = SignUp.signUpFirstName;
-            this.Text = "Toll System | User Information:" + " " + firstName;
+            this.Text = "Toll System | User Information: " + firstName;
         }
 
         private void UserInformation_Load(object sender, EventArgs e)
@@ -310,12 +316,92 @@ namespace WindowsFormsApp2
         }
 
         ///
-        /// TODO: Comment on submit bank button
+        /// Variables are stored containing all user information and form closes on success
+        /// UserPanel form is now focused and all data is passed to that form
         ///
 
         private void btnSubmitBank_Click(object sender, EventArgs e)
         {
-            // TODO: Add logic for submit bank details button
+            if (txtAccountName.Text.Length > 1 &&
+                txtCardNum.Text.Length > 1 &&
+                txtSecurityCode.Text.Length == 3 &&
+                cbExpiryMonth.SelectedIndex > -1 &&
+                cbExpiryYear.SelectedIndex > -1)
+            {
+                // success
+                switch (mainSelectedLang)
+                {
+                    case 0:
+                        MessageBox.Show(Translations.SUCCESS_BANK_MSG_NOR);
+                        mainSelectedLang = 0;
+                        break;
+                    case 1:
+                        MessageBox.Show(Translations.SUCCESS_BANK_MSG_GER);
+                        mainSelectedLang = 1;
+                        break;
+                    case 2:
+                        MessageBox.Show(Translations.SUCCESS_BANK_MSG_ENG);
+                        mainSelectedLang = 2;
+                        break;
+                    default:
+                        MessageBox.Show(Translations.SUCCESS_BANK_MSG_NOR);
+                        mainSelectedLang = 0;
+                        break;
+                }
+
+                carModel = txtCarModel.Text;
+                carRegNumber = txtRegNum.Text;
+                bankAccountName = txtAccountName.Text;
+                bankCardNumber = Convert.ToInt32(txtCardNum.Text);
+                bankSecurityCode = Convert.ToInt32(txtSecurityCode.Text);
+                bankCardExpiryMonth = (int)cbExpiryMonth.SelectedItem;
+                bankCardExpiryYear = (int)cbExpiryYear.SelectedItem;
+
+                Close();
+            } else if (txtAccountName.Text.Length < 1 ||
+                txtCardNum.Text.Length < 1 ||
+                txtSecurityCode.Text.Length < 3 ||
+                txtAccountName.Text == "" ||
+                txtCardNum.Text == "" ||
+                txtSecurityCode.Text == "" ||
+                cbExpiryMonth.SelectedIndex == -1 ||
+                cbExpiryYear.SelectedIndex == -1)
+            {
+                // show error: missing text
+                switch (mainSelectedLang)
+                {
+                    case 0:
+                        MessageBox.Show(Translations.ERROR_EMPTY_MSG_NOR);
+                        break;
+                    case 1:
+                        MessageBox.Show(Translations.ERROR_EMPTY_MSG_GER);
+                        break;
+                    case 2:
+                        MessageBox.Show(Translations.ERROR_EMPTY_MSG_ENG);
+                        break;
+                    default:
+                        MessageBox.Show(Translations.ERROR_EMPTY_MSG_NOR);
+                        break;
+                }
+            } else
+            {
+                // show error: unknown
+                switch (mainSelectedLang)
+                {
+                    case 0:
+                        MessageBox.Show(Translations.ERROR_OTHER_MSG_NOR);
+                        break;
+                    case 1:
+                        MessageBox.Show(Translations.ERROR_OTHER_MSG_GER);
+                        break;
+                    case 2:
+                        MessageBox.Show(Translations.ERROR_OTHER_MSG_ENG);
+                        break;
+                    default:
+                        MessageBox.Show(Translations.ERROR_OTHER_MSG_NOR);
+                        break;
+                }
+            }
         }
 
         ///

@@ -176,8 +176,6 @@ namespace WindowsFormsApp2
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            // TODO: Add logic for Toll Operator login
-
             // User login logic
             if (txtFirstName.Text == firstName &&
                 txtLastName.Text == lastName &&
@@ -202,6 +200,10 @@ namespace WindowsFormsApp2
                 UserPanel formUserPanel = new UserPanel();
                 UserInfo formUserInfo = new UserInfo();
 
+                formUserPanel.mainSelectedLang = mainSelectedLang;
+                formUserPanel.firstName = firstName;
+                formUserPanel.lastName = lastName;
+                formUserPanel.passportNum = passportNum;
                 formUserPanel.Show();
 
                 for (int i = Application.OpenForms.Count - 1; i >= 0; i--)

@@ -67,6 +67,22 @@ namespace WindowsFormsApp2
         public readonly static string CARD_SECURITY_CODE_GER = "Karten-Sicherheitscode";
         public readonly static string CARD_SECURITY_CODE_ENG = "Card security code";
 
+        public readonly static string USER_INFO_NOR = "Personlig informasjon";
+        public readonly static string USER_INFO_GER = "Persönliche Angaben";
+        public readonly static string USER_INFO_ENG = "Personal information";
+
+        public readonly static string CAR_INFO_NOR = "Bilinformasjon";
+        public readonly static string CAR_INFO_GER = "Fahrzeugdaten";
+        public readonly static string CAR_INFO_ENG = "Car information";
+
+        public readonly static string BANK_DETAILS_NOR = "Bankinformasjon";
+        public readonly static string BANK_DETAILS_GER = "Bankdaten";
+        public readonly static string BANK_DETAILS_ENG = "Bank details";
+
+        public readonly static string PAYMENT_HISTORY_NOR = "Betalingshistorikk";
+        public readonly static string PAYMENT_HISTORY_GER = "Zahlungshistorie";
+        public readonly static string PAYMENT_HISTORY_ENG = "Payment history";
+
         public readonly static string SUCCESS_SIGNUP_MSG_NOR = "Suksess: Fortsett for å logge på.";
         public readonly static string SUCCESS_SIGNUP_MSG_GER = "Erfolgreich: Bitte melden Sie sich an.";
         public readonly static string SUCCESS_SIGNUP_MSG_ENG = "Success: Please proceed to log in.";
@@ -78,6 +94,10 @@ namespace WindowsFormsApp2
         public readonly static string SUCCESS_CAR_MSG_NOR = "Suksess: Skriv inn bankdetaljene dine nå.";
         public readonly static string SUCCESS_CAR_MSG_GER = "Erfolgreich: Bitte geben Sie nun Ihre Bankverbindung ein.";
         public readonly static string SUCCESS_CAR_MSG_ENG = "Success: Now please enter your bank details.";
+
+        public readonly static string SUCCESS_BANK_MSG_NOR = "Suksess: Du vil nå bli omdirigert til brukerpanelet ditt.";
+        public readonly static string SUCCESS_BANK_MSG_GER = "Erfolg: Sie werden nun zu Ihrem Benutzerpanel weitergeleitet.";
+        public readonly static string SUCCESS_BANK_MSG_ENG = "Success: You will now be redirected to your user panel.";
 
         public readonly static string ERROR_EMPTY_MSG_NOR = "Feil: Sørg for at alle tekstbokser er fylt ut.";
         public readonly static string ERROR_EMPTY_MSG_GER = "Fehler: Bitte stellen Sie sicher, dass alle Textfelder ausgefüllt sind.";
