@@ -90,5 +90,34 @@ namespace WindowsFormsApp2
         public readonly static string ERROR_OTHER_MSG_NOR = "Feil: Ukjent feil oppstod - prøv igjen.";
         public readonly static string ERROR_OTHER_MSG_GER = "Fehler: Unbekannter Fehler aufgetreten - bitte versuchen Sie es erneut.";
         public readonly static string ERROR_OTHER_MSG_ENG = "Error: Unknown error occurred - please try again.";
+
+        public readonly static string OPERATOR_LOGIN_BTN_MSG_NOR = "Bompengeoperatør Pålogging";
+        public readonly static string OPERATOR_LOGIN_BTN_MSG_GER = "Mautbetreiber-Login";
+        public readonly static string OPERATOR_LOGIN_BTN_MSG_ENG = "Toll Operator Login";
+
+        public readonly static string TRANS_DEPT_LOGIN_BTN_MSG_NOR = "Transportavdelingen Pålogging";
+        public readonly static string TRANS_DEPT_LOGIN_BTN_MSG_GER = "Login der Verkehrsabteilung";
+        public readonly static string TRANS_DEPT_LOGIN_BTN_MSG_ENG = "Transport Department Login";
+
+        public readonly static string OPERATOR_PANEL_TITLE_NOR = "Fakturerings- og betalingshistorikk";
+        public readonly static string OPERATOR_PANEL_TITLE_GER = "Abrechnungs- und Zahlungsverlauf";
+        public readonly static string OPERATOR_PANEL_TITLE_ENG = "Billing and Payment History";
+
+        public readonly static string SELECT_EXIT_TITLE_NOR = "Velg Avslutt:";
+        public readonly static string SELECT_EXIT_TITLE_GER = "Wählen Sie Beenden:";
+        public readonly static string SELECT_EXIT_TITLE_ENG = "Select Exit:";
+
+        public readonly static string CALCULATE_BUTTON_TEXT_NOR = "Regne ut";
+        public readonly static string CALCULATE_BUTTON_TEXT_GER = "Berechnung";
+        public readonly static string CALCULATE_BUTTON_TEXT_ENG = "Calculate";
+
+        public readonly static string PROCESS_BUTTON_TEXT_NOR = "Behandle Regningen";
+        public readonly static string PROCESS_BUTTON_TEXT_GER = "Rechnung Bearbeiten";
+        public readonly static string PROCESS_BUTTON_TEXT_ENG = "Process Bill";
+        
+        public readonly static string PASSWORD_NOR= "Passort";
+        public readonly static string PASSWORD_GER= "Passwort";
+        public readonly static string PASSWORD_ENG= "Password";
+
     }
 }
